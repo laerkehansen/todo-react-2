@@ -6,7 +6,7 @@ const ListItem = ({
   deleteTask,
 }) => {
   return (
-    <li className="grid grid-cols-[1fr_auto_auto] gap-2 items-center p-2">
+    <li className="grid grid-cols-[1fr_auto_auto] gap-2 items-center p-2 bg-violet-50 border-2 border-violet-200">
       <p
         className={
           task.completed ? "text-green-500 line-through" : "text-black"

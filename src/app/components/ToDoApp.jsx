@@ -41,15 +41,19 @@ const ToDoApp = () => {
   const incompleteTasks = tasks.filter((task) => !task.completed);
   return (
     <section className=" bg-violet-300 p-10">
-      <h1>TODO LIST</h1>
+      <h1 className="font-bold text-2xl text-white">TODO LIST</h1>
       <AddTask addTask={addTask} />
-      <h2>to do</h2>
+      <h2 className="font-bold bg-violet-400 p-2 text-white border-violet-500 border-2">
+        To do
+      </h2>
       <List
         tasks={incompleteTasks}
         toggleTaskCompletion={toggleTaskCompletion}
         deleteTask={deleteTask}
       />
-      <h2>done</h2>
+      <h2 className="font-bold bg-violet-400 p-2 text-white border-violet-500 border-2">
+        Done
+      </h2>
       <List
         tasks={completedTasks}
         toggleTaskCompletion={toggleTaskCompletion}

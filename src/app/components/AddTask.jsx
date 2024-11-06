@@ -5,7 +5,7 @@ const AddTask = ({ onSubmit, addTask }) => {
     <div className="flex justify-between gap-5 py-4">
       <form className="flex justify-between gap-5 py-4" onSubmit={addTask}>
         <input
-          className=" rounded-md pl-2"
+          className=" rounded-md pl-2 text-violet-950"
           type="text"
           name="task"
           placeholder="Add a new task"
@@ -15,7 +15,7 @@ const AddTask = ({ onSubmit, addTask }) => {
           className="bg-violet-400 hover:bg-violet-500 p-2 rounded-md"
           type="submit"
         >
-          add task
+          Add task
         </button>
       </form>
     </div>
