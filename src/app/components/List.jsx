@@ -1,8 +1,13 @@
 import ListItem from "./ListItem";
-const List = () => {
+import AddTask from "./AddTask";
+const List = ({ tasks }) => {
   return (
     <ul>
-      <ListItem taskText="vaske tøj" />
+      {/* <AddTask /> */}
+      {tasks.map((task) => (
+        <ListItem key={task.id} task={task} />
+      ))}
+      {/* <ListItem taskText="vaske tøj" tasks={tasks} /> */}
     </ul>
   );
 };
