@@ -1,14 +1,18 @@
 import ListItem from "./ListItem";
-import AddTask from "./AddTask";
-const List = ({ tasks }) => {
+const List = ({ tasks, toggleTaskCompletion, deleteTask }) => {
   return (
-    <ul>
-      {/* <AddTask /> */}
-      {tasks.map((task) => (
-        <ListItem key={task.id} task={task} />
-      ))}
-      {/* <ListItem taskText="vaske tøj" tasks={tasks} /> */}
-    </ul>
+    <div>
+      <ul className="even:bg-violet-100">
+        {tasks.map((task) => (
+          <ListItem
+            key={task.id}
+            task={task}
+            deleteTask={deleteTask}
+            toggleTaskCompletion={toggleTaskCompletion} // Passer toggle-funktion
+          />
+        ))}
+      </ul>
+    </div>
   );
 };
 
